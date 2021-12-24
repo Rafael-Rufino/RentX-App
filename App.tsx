@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import AppLoading from "expo-app-loading";
 import {
   useFonts,
@@ -16,7 +16,7 @@ import theme from "./src/global/styles/theme";
 import { StatusBar } from "react-native";
 
 export default function App() {
-  const [fontsLoaded] = useState({
+  const [fontsLoaded] = useFonts({
     Inter_400Regular,
     Inter_500Medium,
     Archivo_400Regular,
