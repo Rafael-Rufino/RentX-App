@@ -3,13 +3,13 @@ import styled from "styled-components/native";
 import theme from "../../global/styles/theme";
 
 export const Container = styled.View`
-  width: 109px;
+  width: 106px;
   height: 92px;
   justify-content: center;
   align-items: center;
   background-color: ${({ theme }) => theme.colors.background_primary};
   padding: 16px;
-  margin-bottom: 8px;
+  margin: 5px 4px;
 `;
 export const Name = styled.Text`
   font-family: ${({ theme }) => theme.fonts.primary_500};

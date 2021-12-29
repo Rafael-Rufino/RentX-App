@@ -16,8 +16,10 @@ import AppLoading from "expo-app-loading";
 
 import theme from "./src/global/styles/theme";
 //import { Home } from "./src/screens/Home";
+//import { CarDetails } from "./src/screens/CarDetails";
 import { StatusBar } from "react-native";
-import { CarDetails } from "./src/screens/CarDetails";
+import { SchedulingDetails } from "./src/screens/SchedulingDetails";
+//import { Scheduling } from "./src/screens/Scheduling";
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -32,7 +34,7 @@ export default function App() {
   }
   return (
     <ThemeProvider theme={theme}>
-      <CarDetails />
+      <SchedulingDetails />
     </ThemeProvider>
   );
 }
