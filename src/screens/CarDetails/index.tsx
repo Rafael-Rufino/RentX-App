@@ -25,8 +25,14 @@ import {
   Footer,
 } from "./styles";
 import { Button } from "../../components/Button";
+import { useNavigation } from "@react-navigation/native";
 
 export function CarDetails() {
+  const navigation = useNavigation();
+
+  function handleConfirmeRental() {
+    navigation.navigate("Scheduling");
+  }
   return (
     <Container>
       <Header>
@@ -67,7 +73,10 @@ export function CarDetails() {
         </About>
       </Content>
       <Footer>
-        <Button title="Confirma" />
+        <Button
+          title="Escolher periodo do aluguel"
+          onPress={handleConfirmeRental}
+        />
       </Footer>
     </Container>
   );

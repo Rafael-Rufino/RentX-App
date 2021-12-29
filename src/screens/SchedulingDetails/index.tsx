@@ -37,9 +37,14 @@ import {
   RendalPriceDetails,
 } from "./styles";
 import { RFValue } from "react-native-responsive-fontsize";
+import { useNavigation } from "@react-navigation/native";
 
 export function SchedulingDetails() {
+  const navigation = useNavigation();
   const theme = useTheme();
+  function handleConfirmeRental() {
+    navigation.navigate("SchedulingComplete");
+  }
   return (
     <Container>
       <Header>
@@ -105,7 +110,11 @@ export function SchedulingDetails() {
         </RentalPrice>
       </Content>
       <Footer>
-        <Button title="Confirma" color={theme.colors.success} />
+        <Button
+          title="Aluguel agora"
+          color={theme.colors.success}
+          onPress={handleConfirmeRental}
+        />
       </Footer>
     </Container>
   );
