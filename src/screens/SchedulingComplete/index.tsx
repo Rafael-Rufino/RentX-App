@@ -11,6 +11,10 @@ export function SchedulingComplete() {
   function handleComplete() {
     navigation.navigate("Home");
   }
+  function handleBack() {
+    navigation.goBack();
+  }
+
   const { width } = useWindowDimensions();
   return (
     <Container>

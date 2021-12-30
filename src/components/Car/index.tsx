@@ -1,5 +1,6 @@
 import React from "react";
-
+import { RectButtonProps } from "react-native-gesture-handler";
+import { CarDTO } from "../../dtos/CarDTO";
 import {
   Container,
   Details,
@@ -12,22 +13,14 @@ import {
   Type,
   CarImage,
 } from "./styles";
-import GasolineSvg from "../../assets/gasoline.svg";
-import { RectButtonProps } from "react-native-gesture-handler";
-interface CarData {
-  brand: string;
-  name: string;
-  rent: {
-    period: string;
-    price: number;
-  };
-  thumbnail: string;
-}
+import { getAccessoryIcon } from "../../utils/getAccessoryIcon";
+
 interface Props extends RectButtonProps {
-  data: CarData;
+  data: CarDTO;
 }
 
 export function Car({ data, ...rest }: Props) {
+  const MotorIcon = getAccessoryIcon(data.fuel_type);
   return (
     <Container {...rest}>
       <Details>
@@ -41,7 +34,7 @@ export function Car({ data, ...rest }: Props) {
           </Rent>
 
           <Type>
-            <GasolineSvg />
+            <MotorIcon />
           </Type>
         </About>
       </Details>
