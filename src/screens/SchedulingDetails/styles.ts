@@ -28,7 +28,7 @@ export const Content = styled.ScrollView.attrs({
   showsVerticalScrollIndicator: false,
 })``;
 
-export const Datails = styled.View`
+export const Details = styled.View`
   width: 100%;
   align-items: center;
   justify-content: space-between;
@@ -60,7 +60,7 @@ export const Price = styled.Text`
   color: ${({ theme }) => theme.colors.main};
 `;
 
-export const Acessories = styled.View`
+export const Accessories = styled.View`
   width: 100%;
   flex-direction: row;
   flex-wrap: wrap;
