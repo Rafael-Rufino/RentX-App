@@ -8,6 +8,7 @@ import { CarDetails } from "../screens/CarDetails";
 import { Scheduling } from "../screens/Scheduling";
 import { SchedulingComplete } from "../screens/SchedulingComplete";
 import { SchedulingDetails } from "../screens/SchedulingDetails";
+import { MyCars } from "../screens/MyCars";
 
 export function StackRoutes() {
   return (
@@ -17,6 +18,7 @@ export function StackRoutes() {
       }}
     >
       <Screen name="Home" component={Home} />
+      <Screen name="MyCars" component={MyCars} />
       <Screen name="CarDetails" component={CarDetails} />
       <Screen name="Scheduling" component={Scheduling} />
       <Screen name="SchedulingComplete" component={SchedulingComplete} />
